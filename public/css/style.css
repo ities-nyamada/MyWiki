@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* ####################################################################### */
+/* 全ページ共通 */
+/* ####################################################################### */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+*{
+  font-size: 12px;
+  border-collapse: collapse;
+}
+a{
+  color: #000;
+}
+ a:hover{
+  text-decoration: none;
+  color: #000;
+}
+p{
+  color: #000
+}
+
+.page-container{
+  padding-left: 220px;
+  transition: all .3s ease;
+}
+
+.header {
+    display: block;
+    margin-bottom: 0;
+    padding: 0;
+    position: fixed;
+    width: calc(100% - 220px);
+    z-index: 800;
+}
+
+
+main{
+  padding-top: 72px;
+  min-height: calc(100vh - 61px);
+}
+
+
+.container-fluid, .row, .column {height: 100%;}
+
+.my-icon {color: #6c61a8}
+
+.my-secondary-icon {color: #ffffff}
+
+
+/* ####################################################################### */
+/* ログイン画面 */
+/* ####################################################################### */
+.loginleft{
+  height: 100vh;
+  position: relative;
+  top: 0;
+  background-color: #6c61a8;
+}
+
+.logintitle{
+  font-size:  180px;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+/* オリジナルログインボタン色 */
+.btn-login,
+.btn-login.disabled, .btn-login:disabled {
+  color: #fff;
+  background-color: #6c61a8;
+  border-color: #6c61a8;
+}
+
+/* focusされた時の枠線の色 */
+.btn-login:focus, .btn-login.focus,
+.btn-login:not(:disabled):not(.disabled):active:focus, .btn-login:not(:disabled):not(.disabled).active:focus,
+.show > .btn-login.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(112, 14, 192, 0.5);
+}
+
+/* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
+.btn-login:hover {
+  color: #fff;
+  background-color: #585086;
+  border-color:  #585086;
+}
+
+/* active時の色（hover時と同等かさらに濃いor暗めの色を指定） */
+.btn-login:not(:disabled):not(.disabled):active, .btn-login:not(:disabled):not(.disabled).active,
+.show > .btn-login.dropdown-toggle {
+  color: #fff;
+  background-color: #585086;
+  border-color: #585086;
+}
