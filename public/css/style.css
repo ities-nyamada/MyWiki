@@ -40,19 +40,30 @@ p{
     z-index: 800;
 }
 
-
 main{
   padding-top: 72px;
   min-height: calc(100vh - 61px);
 }
 
+.container-fluid, .row, .column {
+  height: 100%;
+}
 
-.container-fluid, .row, .column {height: 100%;}
+.my-icon {
+  color: #6c61a8
+}
 
-.my-icon {color: #6c61a8}
+.my-secondary-icon {
+  color: #ffffff
+}
 
-.my-secondary-icon {color: #ffffff}
+input {
+  vertical-align : middle;
+}
 
+button {
+  cursor:pointer;
+}
 
 /* ####################################################################### */
 /* ログイン画面 */
@@ -101,4 +112,68 @@ main{
   color: #fff;
   background-color: #585086;
   border-color: #585086;
+}
+
+
+/* ####################################################################### */
+/* ホーム画面 */
+/* ####################################################################### */
+
+.home-main{
+  height: 100vh;
+  position: relative;
+  top: 0;
+  background-color: #ffffff;
+}
+
+.hometitle{
+  font-size:  150px;
+  color:  #6c61a8;
+}
+
+/* 通常ボックス */
+.box-regular{
+  background: #fff;
+  padding:1.5rem;
+}
+
+/* 通常ボックス単体で使う場合追加 */
+.box-regular-simple{
+  border-radius: 10px;
+}
+
+/* 大見出し */
+.title-box{
+  border-radius: 13.5px 13.50px 0 0;
+  display: block;
+  padding: 1em;
+  background: #585086;
+  font-size: 1.25rem;
+  color: #fff;
+}
+/* 小見出し */
+.title-box-sm{
+  display: block;
+  padding: 1em;
+  background: #D9D9D9;
+}
+
+.box-shadow-disable{
+  box-shadow:none;
+}
+
+
+
+/* ####################################################################### */
+/* 共通ヘッダー */
+/* ####################################################################### */
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.header-text{
+  font-size: 1.5rem;
+  color: #fff;
 }

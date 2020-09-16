@@ -21,6 +21,6 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('login', 'LoginController@index')->name('Login.index');
 
     # ホーム画面へのルート
-    Route::get('index', 'HomeController@index')->name('Home.index');
+    Route::get('home', 'HomeController@index')->name('home');
 });
     
