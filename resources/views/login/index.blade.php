@@ -1,10 +1,5 @@
 @extends('templates.base')
 
-@section('menuber')
-    @parent
-    インデックスページ
-@endsection
-
 @section('content')
 <div class="container-fluid">
     <div class="row">
