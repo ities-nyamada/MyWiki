@@ -1,10 +1,5 @@
 @extends('templates.base')
 
-@section('menuber')
-    @parent
-    インデックスページ
-@endsection
-
 @section('content')
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mt-3 mb-3">
     <a class="navbar-brand" href="/home">
