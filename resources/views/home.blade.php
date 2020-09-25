@@ -16,7 +16,7 @@
                 <a class="nav-link header-text" href="#">マイアカウント</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link header-text" href="/login">ログアウト</a>
+                <a class="nav-link header-text" href="/logout_top">ログアウト</a>
             </li>
         </ul>
     </div>

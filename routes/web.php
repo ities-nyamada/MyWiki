@@ -11,16 +11,28 @@
 |
 */
 
+# トップページを返す
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 # ネームスペースがweb
 Route::group(['namespace' => 'Web'], function () {
+
+    # アカウント作成へのルート
+    Route::get('users/create', 'UserController@create')->name('users.create');
+
+    # 登録処理へのルート
+    Route::post('person', 'UserController@store');
+    
     # ログイン画面へのルート
-    Route::get('login', 'LoginController@index')->name('Login.index');
+    Route::get('top', 'LoginController@index')->name('Login.index');
+
+    Route::get('logout_top', 'LoginController@logout');
 
     # ホーム画面へのルート
-    Route::get('home', 'HomeController@index')->name('home');
 });
     
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

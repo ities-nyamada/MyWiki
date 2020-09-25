@@ -76,12 +76,16 @@ button {
 }
 
 .logintitle{
-  font-size:  180px;
+  font-size:  120px;
   position: absolute;
 	top: 50%;
 	left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+}
+
+.logo{
+  font-size:  120px;
 }
 
 /* オリジナルログインボタン色 */
@@ -147,7 +151,7 @@ button {
   border-radius: 13.5px 13.50px 0 0;
   display: block;
   padding: 1em;
-  background: #585086;
+  background: #6c61a8;
   font-size: 1.25rem;
   color: #fff;
 }
@@ -162,7 +166,20 @@ button {
   box-shadow:none;
 }
 
+/* ####################################################################### */
+/* 新規作成画面 */
+/* ####################################################################### */
 
+
+.bg-main-color {
+  background-color: #6c61a8 !important;
+}
+
+a.bg-main-color:hover, a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #585086 !important;
+}
 
 /* ####################################################################### */
 /* 共通ヘッダー */
