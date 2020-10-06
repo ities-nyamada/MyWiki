@@ -15,14 +15,14 @@
         <div class="col-6">
             <div class="row">
                 <div class="col-4 offset-4 align-self-center">
-                    <form action="" method="POST" >
+                    <form action="/login" method="POST" >
                         @csrf
                         <div class="mb-4 text-center">
                             <i class="fas fa-dice-d20 fa-5x my-icon mb-4"></i>
                             <h1>ログイン</h1>
                         </div>
                         <div>
-                            <input class="form-control mb-4" type="text" placeholder="ID" name="id">
+                            <input class="form-control mb-4" type="text" placeholder="メールアドレス" name="email">
                         </div>
                         <div>
                             <input class="form-control mb-4" type="password" placeholder="パスワード" name="password">
@@ -32,7 +32,7 @@
                         </div>
                     </form>
                     <div class="mb-3 text-right forgot-hover">
-                        <a href="/members/create">アカンウト新規登録はこちら</a>
+                        <a href="/account/create">アカンウト新規登録はこちら</a>
                     </div>
                     <div class="mb-3 text-right forgot-hover">
                         <a href="">IDをお忘れの方はこちら</a>

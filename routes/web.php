@@ -20,19 +20,30 @@ Route::get('/', function () {
 Route::group(['namespace' => 'Web'], function () {
 
     # アカウント作成へのルート
-    Route::get('users/create', 'UserController@create')->name('users.create');
+    Route::get('account/create', 'AccountController@create')->name('accounts.create');
 
-    # 登録処理へのルート
-    Route::post('person', 'UserController@store');
+    #アカウント登録処理へのルート
+    Route::post('account', 'AccountController@store');
     
-    # ログイン画面へのルート
-    Route::get('top', 'LoginController@index')->name('Login.index');
 
-    Route::get('logout_top', 'LoginController@logout');
 
-    # ホーム画面へのルート
+    #------------------------------------------------------------------------------
+    # 認証ユーザーだけ見れる画面
+    #------------------------------------------------------------------------------        
+    Route::group(['middleware' => 'auth'], function () {
+
+        Route::get('/home', 'HomeController@index')->name('home');
+    });
+
 });
     
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/laravel', function () {
+    return view('welcome');
+});
+
+# ログイン画面へルート
+Route::get('login', function () {
+    return view('index');
+})->name('/login');

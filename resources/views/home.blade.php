@@ -10,13 +10,16 @@
     <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link header-text" href="#">ユーザー：〇〇</a>
+                <a class="nav-link header-text" href="#">ユーザー：{{Auth::user()->email}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link header-text" href="#">マイアカウント</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link header-text" href="/logout_top">ログアウト</a>
+                <form class="dropdown-item" method="post" action='/logout'>
+                    @csrf
+                    <button class="button-empty" type="submit">ログアウト</button>
+                </form>
             </li>
         </ul>
     </div>

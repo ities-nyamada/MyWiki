@@ -1,24 +1,25 @@
 <?php
 
 namespace App\Http\Controllers\Web;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\UserPlan;
-use App\Models\AutoOffer;
-use App\Models\Seller;
-use App\Models\Offer;
-use Illuminate\Support\Facades\Auth;
-use Carbon\Carbon;
-use App\Models\Infomations;
 
 class HomeController extends Controller
 {
+    // /**
+    //  * Create a new controller instance.
+    //  *
+    //  * @return void
+    //  */
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
-     * ログイン後トップ画面のviewを返す
+     * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
